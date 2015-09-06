@@ -35,7 +35,7 @@ public class OrderService {
 
                 Product product = new Product();
                 product.setId(cursor.getInt(1));
-                order.setProduct(product);
+//                order.setProductList(product);
                 orderList.add(order);
             }
             return orderList;

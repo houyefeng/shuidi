@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical">
     <!-- 订单列表中的一个订单 -->
-
+        <!-- 地址、电话 -->
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
@@ -13,17 +13,17 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="订单"
-            android:id="@+id/textView" />
+            android:id="@+id/orderId" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/orderInfo" />
     </LinearLayout>
-
-    <ListView
-        android:layout_width="wrap_content"
+        <!-- 订单中的商品 -->
+    <com.shuidi.view.ProductGridView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/orderProducts" />
+        android:numColumns="1"
+        android:id="@+id/productGridView" />
 </LinearLayout>
